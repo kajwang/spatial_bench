@@ -1,0 +1,6 @@
+__pycache__/
+.thumbs
+.vscode
+utils/asset_utils.py
+assets/
+configs/tasks/arnold*/*
