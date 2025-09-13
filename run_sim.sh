@@ -1,5 +1,3 @@
-source /opt/ros/${ROS_DISTRO}/setup.bash
-source ros2/${ROS_DISTRO}_ws/install/setup.bash
 export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6
 
 # default cfg path
