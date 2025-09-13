@@ -14,7 +14,9 @@ To setup the IDE, please follow these instructions:
 - set /path/to/your_isaaclab in .vscode/settings.json to activate code prompting
 
 ### Asset:
-Setup /path/to/your_asset_root & /path/to/robot_asset in file utils/asset_utils.py.
+Download the assets from [Google Drive Link](https://drive.google.com/file/d/1fLYqV2lXbXy9I4VHaGTPDCeLD8CCvnrB/view?usp=sharing), and put it under root directory.
+
+Setup /path/to/your_asset_root & /path/to/robot_asset in utils/asset_utils.py.
 
 ## Run benchmark simulation:
 ```bash
