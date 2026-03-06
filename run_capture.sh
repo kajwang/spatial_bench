@@ -34,7 +34,7 @@ echo "  View center Z offset: $VIEW_CENTER_Z_OFFSET"
 echo "  Overview scales: height=$OVERVIEW_HEIGHT_SCALE, radius=$OVERVIEW_RADIUS_SCALE, min_height=$OVERVIEW_MIN_HEIGHT, side=$OVERVIEW_SIDE_SCALE"
 echo ""
 
-python3 capture_ring_v4.py \
+python3 capture_ring.py \
   --cfg "$CFG_FILE" \
   --setting-id "$SETTING_ID" \
   --target "$TARGET" \
