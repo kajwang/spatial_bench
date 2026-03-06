@@ -1,0 +1,295 @@
+name: object_movement
+
+# ------------------scene setting------------------
+scene:
+  type: indoors
+  prim_path: /ArnoldRoom
+  spawn:
+    usd_path: /house/arnold_0/layout.usd
+    orientation: [0.707, 0.707, 0.0, 0.0]
+    translation: [0.0, 0.0, 0.0]
+    scale: [0.01, 0.01, 0.01]
+  ground:
+    prim_path: /ArnoldRoom/floors
+    type: static
+    collision_approximation: triangleMesh
+    physics_material:
+      static_friction: 1.0
+      dynamic_friction: 0.8
+    visual_material:
+      mdl_path: arnold/materials/Wood/Ash.mdl
+  wall:
+    prim_path: /ArnoldRoom/roomStruct
+    type: static
+    collision_approximation: triangleMesh
+  furniture:
+    # define furniture objects which collision is enabled
+    table_0:
+      prim_path: /ArnoldRoom/furniture/furniture_9652
+      type: static
+      collision_approximation: triangleMesh
+    table_1:
+      prim_path: /ArnoldRoom/furniture/furniture_9645
+      type: static
+      collision_approximation: triangleMesh
+    table_2:
+      prim_path: /ArnoldRoom/furniture/furniture_9655
+      type: static
+      collision_approximation: triangleMesh
+    cabinet_0:
+      prim_path: /ArnoldRoom/furniture/furniture_9653
+      type: static
+      collision_approximation: triangleMesh
+    night_stand_0:
+      prim_path: /ArnoldRoom/furniture/furniture_44441
+      type: static
+      collision_approximation: triangleMesh
+    night_stand_1:
+      prim_path: /ArnoldRoom/furniture/furniture_44442
+      type: static
+      collision_approximation: triangleMesh
+  wall_material_url: arnold/materials/Wall_Board/Cardboard.mdl
+  map_dir: /house/arnold_0
+
+# ------------------rigid bodies setting------------------
+graspable_objects:
+  apple:
+    type: "rigid"
+    prim_path: "/Apple"
+    spawn:
+      usd_path: "/fruit/apple/apple_rigid.usd"
+      translation: [1.9, -2.9, 0.43]
+      orientation: [1.0, 0.0, 0.0, 0.0]
+      scale: [0.007, 0.007, 0.007]
+    mass: 0.1
+    collision_enabled: true
+    collision_approximation: convexHull
+    physics_material:
+      static_friction: 1.5
+      dynamic_friction: 1.5
+
+  apple_static:
+    type: "static"
+    prim_path: "/Apple_Static"
+    spawn:
+      usd_path: "/fruit/apple/apple_rigid.usd"
+      translation: [1.8, -4.5, 0.455]
+      orientation: [1.0, 0.0, 0.0, 0.0]
+      scale: [0.007, 0.007, 0.007]
+    mass: 0.1
+    collision_enabled: true
+    collision_approximation: convexHull
+    physics_material:
+      static_friction: 1.5
+      dynamic_friction: 1.5
+  
+  avocado:
+    type: "rigid"
+    prim_path: "/Avocado"
+    spawn:
+      usd_path: "/fruit/avocado/avocado_rigid.usd"
+      translation: [1.8, -4.45, 0.455]
+      orientation: [1.0, 0.0, 0.0, 0.0]
+      scale: [0.007, 0.007, 0.007]
+    mass: 0.1
+    collision_enabled: true
+    collision_approximation: convexHull
+    physics_material:
+      static_friction: 1.5
+      dynamic_friction: 1.5
+  
+
+  lime:
+    type: "rigid"
+    prim_path: "/Lime"
+    spawn:
+      usd_path: "/fruit/lime/lime_rigid.usd"
+      translation: [-2.8, -0.25, 0.455]
+      orientation: [1.0, 0.0, 0.0, 0.0]
+      scale: [0.01, 0.01, 0.01]
+    mass: 0.1
+    collision_enabled: true
+    collision_approximation: convexHull
+    physics_material:
+      static_friction: 1.5
+      dynamic_friction: 1.5
+
+  coke:
+    type: "rigid"
+    prim_path: "/Coke"
+    spawn:
+      usd_path: "/beverage/coke/coke_rigid.usd"
+      translation: [4.36814, 4.91059, 0.55]
+      orientation: [0.707, 0.707, 0.0, 0.0]
+      scale: [0.007, 0.007, 0.007]
+    mass: 0.1
+    collision_enabled: true
+    collision_approximation: convexHull
+    physics_material:
+      static_friction: 1.5
+      dynamic_friction: 1.5
+  
+  pepsi:
+    type: "rigid"
+    prim_path: "/Pepsi"
+    spawn:
+      usd_path: "/beverage/pepsi/pepsi_rigid.usd"
+      translation: [4.36731, 2.84583, 0.05]
+      orientation: [0.707, 0.707, 0.0, 0.0]
+      scale: [0.008, 0.008, 0.008]
+    mass: 0.1
+    collision_enabled: true
+    collision_approximation: convexHull
+    physics_material:
+      static_friction: 1.5
+      dynamic_friction: 1.5
+
+  sprite:
+    type: "rigid"
+    prim_path: "/Sprite"
+    spawn:
+      usd_path: "/beverage/sprite/sprite_rigid.usd"
+      translation: [-1.62, -2.32, 0.7]
+      orientation: [0.707, 0.707, 0.0, 0.0]
+      scale: [0.007, 0.007, 0.007]
+    mass: 0.1
+    collision_enabled: true
+    collision_approximation: convexHull
+    physics_material:
+      static_friction: 1.5
+      dynamic_friction: 1.5
+  
+  bread_bag:
+    type: "rigid"
+    prim_path: "/Bread_Bag"
+    spawn:
+      usd_path: "/food/bread_bag/bread_bag_rigid.usd"
+      translation: [1.9, -3.13, 0.425]
+      orientation: [1.0, 0.0, 0.0, 0.0]
+      scale: [0.003, 0.003, 0.003]
+    mass: 0.1
+    collision_enabled: true
+    collision_approximation: convexHull
+    physics_material:
+      static_friction: 1.5
+      dynamic_friction: 1.5
+
+  butter:
+    type: "rigid"
+    prim_path: "/Butter"
+    spawn:
+      usd_path: "/food/butter/butter_rigid.usd"
+      translation: [1.8, -4.4, 0.455]
+      orientation: [1.0, 0.0, 0.0, 0.0]
+      scale: [1.0, 1.0, 1.0]
+    mass: 0.1
+    collision_enabled: true
+    collision_approximation: convexHull
+    physics_material:
+      static_friction: 1.5
+      dynamic_friction: 1.5
+
+  sponge:
+    type: "rigid"
+    prim_path: "/Sponge"
+    spawn:
+      usd_path: "/others/sponge/sponge_rigid.usd"
+      translation: [-3.73354, -3.97086, 0.1]
+      orientation: [0.707, 0.0, 0.0, 0.707]
+      scale: [0.07, 0.07, 0.1]
+    mass: 0.1
+    collision_enabled: true
+    collision_approximation: convexHull
+    physics_material:
+      static_friction: 1.5
+      dynamic_friction: 1.5
+
+  soap_dispenser:
+    type: "rigid"
+    prim_path: "/Soap_Dispenser"
+    spawn:
+      usd_path: "/others/soap_dispenser/soap_dispenser_rigid.usd"
+      translation: [-1.62, -2.32, 0.7]
+      orientation: [1.0, 0.0, 0.0, 0.0]
+      scale: [0.005, 0.005, 0.005]
+    mass: 0.1
+    collision_enabled: true
+    collision_approximation: convexHull
+    physics_material:
+      static_friction: 1.5
+      dynamic_friction: 1.5
+
+container_objects:
+  bowl_0:
+    type: "static"
+    prim_path: "/Bowl_0"
+    spawn:
+      usd_path: "/container/bowl_0/bowl_rigid.usd"
+      translation: [1.9, -3.1, 0.425]
+      orientation: [1.0, 0.0, 0.0, 0.0]
+      scale: [0.005, 0.005, 0.007]
+    mass: 1.0
+    collision_enabled: true
+    collision_approximation: triangleMesh
+    physics_material:
+      static_friction: 1.2
+      dynamic_friction: 1.0
+    check_box: [-0.08, 0.08, -0.08, 0.08, 0.0, 0.07]
+
+  case_0:
+    type: "static"
+    prim_path: "/Case_0"
+    spawn:
+      usd_path: "/container/case_0/case_rigid.usd"
+      translation: [-1.1, -2.0, 0.0]
+      orientation: [0.707, 0.0, 0.0, 0.707]
+      scale: [0.6, 0.6, 0.5]
+    collision_enabled: true
+    collision_approximation: triangleMesh
+    mass: 3.0
+    physics_material:
+      static_friction: 1.2
+      dynamic_friction: 1.0
+    check_box: [-0.15, 0.15, 0.0, 0.15, -0.11, 0.11]
+
+  case_1:
+    type: "static"
+    prim_path: "/Case_1"
+    spawn:
+      usd_path: "/container/case_1/case_rigid.usd"
+      translation: [-4.39497, 0.586, 0.2]
+      orientation: [0.69162, 0.70315, 0.11574, 0.11767]
+      scale: [0.01, 0.006, 0.01]
+    collision_enabled: true
+    collision_approximation: triangleMesh
+    mass: 3.0
+    physics_material:
+      static_friction: 1.2
+      dynamic_friction: 1.0
+    check_box: [-0.15, 0.15, 0.0, 0.15, -0.11, 0.11]
+
+  basket_0:
+    type: "static"
+    prim_path: "/Basket_0"
+    spawn:
+      usd_path: "/container/basket_0/basket_rigid.usd"
+      translation: [0.09521, 5.27216, 0.10697]
+      orientation: [1.0, 0.0, 0.0, 0.0]
+      scale: [0.01, 0.01, 0.01]
+    collision_enabled: true
+    collision_approximation: triangleMesh
+    mass: 3.0
+    physics_material:
+      static_friction: 1.2
+      dynamic_friction: 1.0
+    check_box: [-0.15, 0.15, 0.0, 0.15, -0.11, 0.11]
+    
+# ------------------task setting------------------
+tasks:
+  type: object_movement
+  settings:
+  - rigid: ["apple_static"]
+  - rigid: ["apple"]
+  - rigid: ["avocado"]
+  - rigid: ["coke"]
+  - rigid: ["lime"]
